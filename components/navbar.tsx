@@ -11,7 +11,8 @@ import Cobaajadulu from "@/public/assets/img/Logo Mockup Coba dulu Aja.png";
 
 const Navbar = () => {
   return (
-    <nav className="bg-opacity-70 bg-gray-800 p-4 z-10 fixed top-0  w-full">
+    // bg-opacity-70 bg-gray-800
+    <nav className="bg-gradient-to-b from-black  p-4 z-10 fixed top-0  w-full">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white font-bold text-lg ">
           <Logo width={37} height={45} />

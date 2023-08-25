@@ -1,11 +1,7 @@
 import React from "react";
 
-type Props = {
-  titleParallax?: string;
-  color?: string;
-};
-
-const titleParallax = ({ titleParallax, color }: Props) => {
+const titleParallax = (props: any) => {
+  const { titleParallax, color } = props;
   return (
     <div>
       <div
