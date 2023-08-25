@@ -25,7 +25,7 @@ const skeletonParallax = ({
   }
 
   return (
-    <div className={`${bg}`}>
+    <div className={`${bg} `}>
       <div
         className={`xl:bg-cover text-black bg-fixed bg-center bg-no-repeat ${bgHero} bg-contain justify-center items-center `}
       >

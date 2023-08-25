@@ -1,13 +1,28 @@
-import Image from "next/image";
+"use client";
+import React, { useEffect } from "react";
 import FirstParallax from "@/components/parallax/firstParallax";
 import SecondParallax from "@/components/parallax/secondParallax";
+import ThirdParallax from "@/components/parallax/thirdParallax";
+import FourthParallax from "@/components/parallax/fourthParallax";
+import FifthParallax from "@/components/parallax/fifthParallax";
+import SixthParallax from "@/components/parallax/sixthParallax";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Logo from "@/components/logo";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <FirstParallax></FirstParallax>
       <SecondParallax></SecondParallax>
+      <ThirdParallax></ThirdParallax>
+      <FourthParallax></FourthParallax>
+      <FifthParallax></FifthParallax>
+      <SixthParallax></SixthParallax>
     </main>
   );
 }

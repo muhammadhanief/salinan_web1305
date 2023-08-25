@@ -1,11 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import { LoremIpsum } from "lorem-ipsum";
-import Content from "../content";
-import TitleParallax from "../titleParallax";
 import SkeletonParallax from "../skeletonParallax";
 
-const firstParallax = () => {
+const fifthParallax = () => {
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
       max: 8,
@@ -30,11 +27,11 @@ const firstParallax = () => {
     <SkeletonParallax
       text={text}
       titleParallax="Memahami Kemiskinan"
-      color="white"
-      bg="bg-bg1"
-      bgHero="bg-hero1"
+      color="black"
+      bg="bg-bg5"
+      bgHero="bg-hero5"
     ></SkeletonParallax>
   );
 };
 
-export default firstParallax;
+export default fifthParallax;

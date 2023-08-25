@@ -1,11 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import { LoremIpsum } from "lorem-ipsum";
-import Content from "../content";
-import TitleParallax from "../titleParallax";
 import SkeletonParallax from "../skeletonParallax";
 
-const firstParallax = () => {
+const fourthParallax = () => {
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
       max: 8,
@@ -17,7 +14,6 @@ const firstParallax = () => {
     },
   });
   // let text = lorem.generateParagraphs(1);
-
   const text = [
     "Kemiskinan adalah masalah global yang mengakar dan mempengaruhi jutaan orang di seluruh dunia. Ini adalah masalah multidimensi yang mencakup faktor ekonomi, sosial dan politik. Meskipun penyebab dan akibat kemiskinan berbeda-beda di berbagai wilayah dan negara, pemahaman terhadap kompleksitas kemiskinan sangatlah penting untuk mengembangkan strategi yang efektif dalam pengentasan kemiskinan.",
     "Kemiskinan dapat didefinisikan sebagai keadaan kekurangan dimana individu atau rumah tangga kekurangan sumber daya dan kemampuan yang diperlukan untuk memenuhi kebutuhan dasar mereka dan menikmati standar hidup yang layak. Kebutuhan dasar tersebut meliputi akses terhadap pangan, air bersih, pendidikan, layanan kesehatan, dan tempat tinggal.",
@@ -29,12 +25,12 @@ const firstParallax = () => {
   return (
     <SkeletonParallax
       text={text}
-      titleParallax="Memahami Kemiskinan"
+      titleParallax="Mengukur Kemiskinan"
       color="white"
-      bg="bg-bg1"
-      bgHero="bg-hero1"
+      bg="bg-bg4"
+      bgHero="bg-hero4"
     ></SkeletonParallax>
   );
 };
 
-export default firstParallax;
+export default fourthParallax;
