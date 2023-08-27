@@ -26,7 +26,7 @@ const fourthParallax = () => {
     <SkeletonParallax
       text={text}
       titleParallax="Mengukur Kemiskinan"
-      color="white"
+      color="black"
       bg="bg-bg4"
       bgHero="bg-hero4"
     ></SkeletonParallax>

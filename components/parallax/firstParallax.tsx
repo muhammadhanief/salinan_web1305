@@ -29,7 +29,7 @@ const firstParallax = () => {
   return (
     <SkeletonParallax
       text={text}
-      titleParallax="Memahami Kemiskinan"
+      titleParallax="Pelajari Kemiskinan"
       color="white"
       bg="bg-bg1"
       bgHero="bg-hero1"

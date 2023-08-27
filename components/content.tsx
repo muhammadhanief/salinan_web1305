@@ -7,7 +7,7 @@ type Props = {
 
 const Content = ({ text }: Props) => {
   return (
-    <div className="lg:mx-36 xl:mx-80 mx-4 my-8 border-2 border-black bg-white rounded-xl bg-opacity-80">
+    <div className="lg:mx-36 xl:mx-80 mx-4 my-8 border-2 border-black bg-white rounded-xl bg-opacity-70">
       <div
         data-aos="zoom-in"
         data-aos-once="true"

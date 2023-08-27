@@ -16,7 +16,7 @@ const titleParallax = (props: any) => {
   return (
     <div>
       <div
-        data-aos="slide-left"
+        data-aos="zoom-out"
         className={`${humnst777.className} text-${color} text-center pb-4 pt-8  text-4xl md:text-5xl lg:text-6xl `}
       >
         {titleParallax}
