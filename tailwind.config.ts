@@ -17,7 +17,7 @@ module.exports = {
         hero5: "url('../public/assets/img/parallaxPhoto/5.png')",
         hero6: "url('../public/assets/img/parallaxPhoto/6.png')",
         parallax1: "url('../public/assets/img/parallaxHero/layout1.png')",
-        parallax2: "url('../public/assets/img/parallaxHero/layout2.png')",
+        parallax2: "url('../public/assets/img/parallaxHero/Layout2.png')",
         parallax3: "url('../public/assets/img/parallaxHero/layout3.png')",
         parallax45: "url('../public/assets/img/parallaxHero/layout45.png')",
         parallax67: "url('../public/assets/img/parallaxHero/layout67.png')",
