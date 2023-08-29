@@ -6,7 +6,7 @@ import Logo from "./logo";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Cobaajadulu from "@/public/assets/img/Logo Mockup Coba dulu Aja.png";
-import DetectionPage from "@/components/detectionPage";
+import DetectionPage from "./detectionPage";
 
 // import Searchbar from "./Searchbar";
 

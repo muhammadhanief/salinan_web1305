@@ -14,7 +14,7 @@ const humnst777 = localFont({
   display: "swap",
 });
 
-const hero = () => {
+const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -89,4 +89,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;
