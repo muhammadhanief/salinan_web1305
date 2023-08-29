@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  important: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +16,11 @@ module.exports = {
         hero4: "url('../public/assets/img/parallaxPhoto/4.png')",
         hero5: "url('../public/assets/img/parallaxPhoto/5.png')",
         hero6: "url('../public/assets/img/parallaxPhoto/6.png')",
+        parallax1: "url('../public/assets/img/parallaxHero/layout1.png')",
+        parallax2: "url('../public/assets/img/parallaxHero/layout2.png')",
+        parallax3: "url('../public/assets/img/parallaxHero/layout3.png')",
+        parallax45: "url('../public/assets/img/parallaxHero/layout45.png')",
+        parallax67: "url('../public/assets/img/parallaxHero/layout67.png')",
       },
       colors: {
         biru: "#228BE6",

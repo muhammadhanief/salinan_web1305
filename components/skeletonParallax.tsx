@@ -25,7 +25,16 @@ const skeletonParallax = ({
   }
 
   return (
-    <div className={`${bg} `}>
+    <div
+      className={`${bg} `}
+      // style={{
+      //   height: "100vh",
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      //   scrollSnapAlign: "start",
+      // }}
+    >
       <div
         className={`xl:bg-cover text-black bg-fixed bg-center bg-no-repeat ${bgHero} bg-contain justify-center items-center `}
       >

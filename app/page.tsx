@@ -6,6 +6,7 @@ import ThirdParallax from "@/components/parallax/thirdParallax";
 import FourthParallax from "@/components/parallax/fourthParallax";
 import FifthParallax from "@/components/parallax/fifthParallax";
 import SixthParallax from "@/components/parallax/sixthParallax";
+import Hero from "@/components/hero";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,7 +17,15 @@ export default function Home() {
     AOS.init();
   }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between ">
+    <main
+      // style={{
+      //   scrollSnapType: "cover",
+      //   overflowY: "scroll",
+      //   height: "100vh",
+      // }}
+      className="flex min-h-screen flex-col items-center justify-between snap-y snap-mandatory "
+    >
+      <Hero></Hero>
       <FirstParallax></FirstParallax>
       <SecondParallax></SecondParallax>
       <ThirdParallax></ThirdParallax>

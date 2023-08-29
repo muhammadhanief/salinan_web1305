@@ -5,6 +5,9 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import DetectionPage from "@/components/detectionPage";
+
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ weight: ["400", "600", "700"], subsets: ["latin"] });
@@ -20,7 +23,7 @@ const humnst777 = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kemiskinan",
+  title: "Salah Kaprah Kemiskinan",
   description: "Data Storytelling BPS Tanah Datar",
 };
 
@@ -30,27 +33,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id">
+    <html className="scroll-smooth" lang="id">
       <body
-        className={`${poppins.className} bg-white  text-black mt-[71px] min-h-screen flex flex-col`}
+        className={`${poppins.className} bg-white  text-black  min-h-screen flex flex-col relative`}
       >
         <header>
           <Navbar />
         </header>
-
         {children}
-
-        <footer className="bg-neutral-200 text-center dark:bg-neutral-700 lg:text-left">
-          <div className="p-4 text-center text-neutral-700 dark:text-neutral-200">
-            © 2023 Copyright :
-            <a
-              className="px-2 text-neutral-800 dark:text-neutral-400"
-              href="https://tailwind-elements.com/"
-            >
-              BPS Kabupaten Tanah Datar
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
