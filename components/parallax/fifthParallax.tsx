@@ -1,6 +1,8 @@
 import React from "react";
 import { LoremIpsum } from "lorem-ipsum";
 import SkeletonParallax from "../skeletonParallax";
+import Content from "../content";
+import Tabel5_1 from "@/public/assets/img/content/tabel 5.1.png";
 
 const fifthParallax = () => {
   const lorem = new LoremIpsum({
@@ -24,13 +26,17 @@ const fifthParallax = () => {
   ];
 
   return (
-    <SkeletonParallax
-      text={text}
-      titleParallax="Memahami Kemiskinan"
-      color="white"
-      bg="bg-bg5"
-      bgHero="bg-hero5"
-    ></SkeletonParallax>
+    <div>
+      <SkeletonParallax
+        text={text}
+        titleParallax="Memahami Kemiskinan"
+        color="white"
+        bg="bg-bg5"
+        bgHero="bg-hero5"
+        img={Tabel5_1}
+        alt="Tabel5.1"
+      ></SkeletonParallax>
+    </div>
   );
 };
 

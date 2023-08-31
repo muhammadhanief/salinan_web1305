@@ -31,7 +31,7 @@ export default function Home() {
       <ThirdParallax></ThirdParallax>
       <FourthParallax></FourthParallax>
       <FifthParallax></FifthParallax>
-      <SixthParallax></SixthParallax>
+      {/* <SixthParallax></SixthParallax> */}
     </main>
   );
 }

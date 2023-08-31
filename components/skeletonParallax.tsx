@@ -2,6 +2,8 @@ import React from "react";
 import TitleParallax from "./titleParallax";
 import Content from "./content";
 import { get } from "http";
+import Tabel5_1 from "@/public/assets/img/content/tabel 5.1.png";
+import Image from "next/image";
 
 type Props = {
   text?: Array<string>;
@@ -11,22 +13,10 @@ type Props = {
   bgHero?: string;
 };
 
-const skeletonParallax = ({
-  text,
-  titleParallax,
-  color,
-  bg,
-  bgHero,
-}: Props) => {
-  const panjang = text!.length;
-  const rows = [];
-  for (let i = 0; i < panjang; i++) {
-    rows.push(<Content key={i} text={text![i]} />);
-  }
-
+const skeletonParallax = (props: any) => {
   return (
     <div
-      className={`${bg} `}
+      className={`${props.bg} `}
       // style={{
       //   height: "100vh",
       //   display: "flex",
@@ -36,13 +26,13 @@ const skeletonParallax = ({
       // }}
     >
       <div
-        className={`xl:bg-cover text-black bg-fixed bg-center bg-no-repeat ${bgHero} bg-contain justify-center items-center `}
+        className={`xl:bg-cover text-black bg-fixed bg-center bg-no-repeat ${props.bgHero} bg-contain justify-center items-center `}
       >
         <TitleParallax
-          titleParallax={titleParallax}
-          color={color}
+          titleParallax={props.titleParallax}
+          color={props.color}
         ></TitleParallax>
-        {rows}
+        <Content text={props.text} alt={props.alt} img={props.img} />
       </div>
     </div>
   );
