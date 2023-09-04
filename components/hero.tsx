@@ -1,13 +1,17 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
 import Image from "next/image";
 import Layout1 from "../public/assets/img/parallaxHero/layout1.png";
 import Layout2 from "../public/assets/img/parallaxHero/Layout2.png";
 import Layout3 from "../public/assets/img/parallaxHero/layout3.png";
-import Layout4 from "../public/assets/img/parallaxHero/layout4.png";
-import Layout5 from "../public/assets/img/parallaxHero/layout5.png";
-import Layout6 from "../public/assets/img/parallaxHero/layout6.png";
-import Layout7 from "../public/assets/img/parallaxHero/layout7.png";
+import Layout45 from "../public/assets/img/parallaxHero/layout45.png";
+import Layout67 from "../public/assets/img/parallaxHero/layout67.png";
+
 import localFont from "next/font/local";
 const humnst777 = localFont({
   src: "../app/font/humnst777_blk_bt/HUM777KI.ttf",
@@ -15,42 +19,27 @@ const humnst777 = localFont({
 });
 
 const Hero = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1 / 6], [1, 2]);
+  // const translateXkanan = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
+  // const translateXkiri = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
+  // const translateX = useTransform(scrollYProgress, [0, 1 / 6], [0, -10000]);
+  const translatekiri = useTransform(scrollYProgress, [0, 1 / 6], [0, -10000]);
+  const translatekanan = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
 
   return (
     <div
-      ref={ref}
+      // ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-content-center"
-      //   style={{
-      //     height: "100vh",
-      //     display: "flex",
-      //     justifyContent: "center",
-      //     alignItems: "center",
-      //     scrollSnapAlign: "start",
-      //   }}
     >
       <motion.div
         className="absolute inset-0 bottom-0 z-0 bg-parallax1"
         style={{
           backgroundPosition: "bottom",
           backgroundSize: "cover",
-          y: backgroundY,
+          // y: backgroundY,
         }}
       />
-      {/* <motion.div
-        className="absolute inset-0 z-0 bg-parallax2"
-        style={{
-          backgroundPosition: "bottom",
-          backgroundSize: "cover",
-          y: backgroundY,
-        }}
-      /> */}
       <motion.h1
         data-aos="fade-down-right"
         className={`${humnst777.className} z-50 text-white text-5xl text-center lg:text-[90px]`}
@@ -62,31 +51,55 @@ const Hero = () => {
         style={{
           backgroundPosition: "bottom",
           backgroundSize: "cover",
-          y: backgroundY,
+          // y: backgroundY,
         }}
       />
       <motion.div
-        className="absolute inset-0 bottom-0 z-20 bg-parallax45"
+        className="absolute inset-0 bottom-0 z-20 bg-parallax45kanan"
         style={{
           backgroundPosition: "bottom",
           backgroundSize: "cover",
-          y: backgroundY,
+          // y: backgroundY,
+          // x: translatekanan,
+          scale,
         }}
       />
       <motion.div
-        className="absolute inset-0 bottom-0 z-20 bg-parallax67"
+        className="absolute inset-0 bottom-0 z-20 bg-parallax45kiri"
         style={{
           backgroundPosition: "bottom",
           backgroundSize: "cover",
-          y: backgroundY,
+          // y: backgroundY,
+          // x: translatekiri,
+          scale,
         }}
       />
       <motion.h1
         data-aos="fade-up-left"
-        className={`${humnst777.className} z-50 text-white text-5xl lg:text-[90px] text-center pt-[30vh]`}
+        className={`${humnst777.className} z-20 text-white text-5xl lg:text-[90px] text-center pt-[30vh]`}
       >
         Kemiskinan
       </motion.h1>
+      <motion.div
+        className="absolute inset-0 bottom-0 z-20 bg-parallax67kiri"
+        style={{
+          backgroundPosition: "bottom",
+          backgroundSize: "cover",
+          // y: backgroundY,
+          x: translatekiri,
+          // scale,
+        }}
+      />
+      <motion.div
+        className="absolute inset-0 bottom-0 z-20 bg-parallax67kanan"
+        style={{
+          backgroundPosition: "bottom",
+          backgroundSize: "cover",
+          // y: backgroundY,
+          x: translatekanan,
+          // scale,
+        }}
+      />
     </div>
   );
 };

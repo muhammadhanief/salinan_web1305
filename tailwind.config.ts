@@ -21,6 +21,13 @@ module.exports = {
         parallax3: "url('../public/assets/img/parallaxHero/layout3.png')",
         parallax45: "url('../public/assets/img/parallaxHero/layout45.png')",
         parallax67: "url('../public/assets/img/parallaxHero/layout67.png')",
+        parallax45kiri: "url('../public/assets/img/parallaxHero/45 kiri.png')",
+        parallax45kanan:
+          "url('../public/assets/img/parallaxHero/45 kanan.png')",
+
+        parallax67kiri: "url('../public/assets/img/parallaxHero/67 kiri.png')",
+        parallax67kanan:
+          "url('../public/assets/img/parallaxHero/67 kanan.png')",
       },
       colors: {
         biru: "#228BE6",
