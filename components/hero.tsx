@@ -20,12 +20,12 @@ const humnst777 = localFont({
 
 const Hero = () => {
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1 / 6], [1, 2]);
+  const scale = useTransform(scrollYProgress, [0, 1 / 6], [1, 2.5]);
   // const translateXkanan = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
   // const translateXkiri = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
   // const translateX = useTransform(scrollYProgress, [0, 1 / 6], [0, -10000]);
-  const translatekiri = useTransform(scrollYProgress, [0, 1 / 6], [0, -10000]);
-  const translatekanan = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
+  const translatekiri = useTransform(scrollYProgress, [0, 1 / 12], [0, -800]);
+  const translatekanan = useTransform(scrollYProgress, [0, 1 / 12], [0, 800]);
 
   return (
     <div
