@@ -84,7 +84,7 @@ const Hero = () => {
       />
       <motion.h1
         data-aos="fade-up-left"
-        className={`${humnst777.className} z-20 text-white text-5xl lg:text-[90px] text-center pt-[2vh] lg:pt-[30vh]`}
+        className={`${humnst777.className} z-20 text-white text-5xl lg:text-[90px] text-center pt-[2vh] lg:pt-[10vh]`}
       >
         Kemiskinan
       </motion.h1>
