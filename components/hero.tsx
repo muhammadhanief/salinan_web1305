@@ -4,6 +4,7 @@ import {
   useScroll,
   useTransform,
   useViewportScroll,
+  useSpring,
 } from "framer-motion";
 import Image from "next/image";
 import Layout1 from "../public/assets/img/parallaxHero/layout1.png";
@@ -21,11 +22,18 @@ const humnst777 = localFont({
 const Hero = () => {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1 / 6], [1, 2.5]);
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   // const translateXkanan = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
   // const translateXkiri = useTransform(scrollYProgress, [0, 1 / 6], [0, 10000]);
   // const translateX = useTransform(scrollYProgress, [0, 1 / 6], [0, -10000]);
-  const translatekiri = useTransform(scrollYProgress, [0, 1 / 12], [0, -800]);
-  const translatekanan = useTransform(scrollYProgress, [0, 1 / 12], [0, 800]);
+  const translatekiri = useTransform(scrollYProgress, [0, 1 / 10], [0, -750]);
+  const translatekanan = useTransform(scrollYProgress, [0, 1 / 10], [0, 750]);
 
   return (
     <div
