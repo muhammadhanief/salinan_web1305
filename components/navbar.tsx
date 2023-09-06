@@ -21,7 +21,7 @@ const Navbar = () => {
       <DetectionPage />
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white font-bold text-lg ">
-          <Logo width={37} height={45} />
+          <Logo width={220} height={45} />
         </Link>
         <Link href="/" className="text-white font-bold text-lg">
           <Image src={Cobaajadulu} alt="Logo BPS" width={37} height={45} />
