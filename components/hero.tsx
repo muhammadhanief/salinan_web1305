@@ -50,7 +50,7 @@ const Hero = () => {
       />
       <motion.h1
         data-aos="fade-down-right"
-        className={`${humnst777.className} z-50 text-white text-5xl text-center lg:text-[90px]`}
+        className={`${humnst777.className} z-50 text-white text-5xl text-center lg:text-[90px] `}
       >
         Salah Kaprah
       </motion.h1>
@@ -84,7 +84,7 @@ const Hero = () => {
       />
       <motion.h1
         data-aos="fade-up-left"
-        className={`${humnst777.className} z-20 text-white text-5xl lg:text-[90px] text-center pt-[30vh]`}
+        className={`${humnst777.className} z-20 text-white text-5xl lg:text-[90px] text-center pt-[2vh] lg:pt-[30vh]`}
       >
         Kemiskinan
       </motion.h1>
